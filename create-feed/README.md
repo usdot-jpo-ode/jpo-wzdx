@@ -59,12 +59,12 @@ The following business rules help assure a standardized and interpretable use of
 6. The purpose of local access only can vary from jurisdiction to jurisdiction for WZDx. Local access only is intended to identify road segments where traffic whose final destination is outside of the road segment would treat the segment the same as a closure. 
 7. If lane information is provided (i.e. the lanes property on the RoadEvent is used), there must be an entry in the lanes array for every lane in the road event, not just a subset.
 8. A work zone isn’t inherently a single road event.
-- If any property, (e.g. restrictions, number of lanes, etc.) changes over the course of a work zone it can be segmented into multiple road events to enable geometries that display changes in the underlying work zone. 
-- A work zone must be segmented into separate road events when a required property of road event or lane object changes. A complex work zone can be linked together using the relationship property.
+    - If any property, (e.g. restrictions, number of lanes, etc.) changes over the course of a work zone it can be segmented into multiple road events to enable geometries that display changes in the underlying work zone. 
+    - A work zone must be segmented into separate road events when a required property of road event or lane object changes. A complex work zone can be linked together using the relationship property.
 9. [is_architectural_change](/spec-content/objects/TypeOfWork.md) is used to denote if the road event will cause an alignment change of greater than one meter in the geometry or architecture of  the underlying road segment. (at completion of road event)
 10. The relationship property of the road event object has two uses. 
-- When using multiple road events to denote a complex work zone the first road event should use the next relationship value and include an array of road_event_id(s) for all road events occurring after it. Each following road event in the complex work zone should have the relationship value first and include an array of road_events_id(s) that occur before it.
-- A road_event with a detour should have the child value and should include the road_event_id of the detour(s). A detour road event should include the relationship parent and include an array of road_event_id(s) that include other road events for which it serves as a detour.
+    - When using multiple road events to denote a complex work zone the first road event should use the next relationship value and include an array of road_event_id(s) for all road events occurring after it. Each following road event in the complex work zone should have the relationship value first and include an array of road_events_id(s) that occur before it.
+    - A road_event with a detour should have the child value and should include the road_event_id of the detour(s). A detour road event should include the relationship parent and include an array of road_event_id(s) that include other road events for which it serves as a detour.
 
 
 ## Data Validation
