@@ -1,4 +1,7 @@
+<img src="https://raw.githubusercontent.com/usdot-jpo-ode/jpo-wzdx/b3ee31a7a231270e536e4d71a7a45623c1e4ec99/images/wzdx_logo_blue_orange_x.png" height="150"/>
+
 # Work Zone Data Exchange (WZDx) Specification
+
 ## Summary
 
 This repository contains the Work Zone Data Exchange (WZDx) Specification.
