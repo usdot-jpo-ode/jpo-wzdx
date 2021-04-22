@@ -10,14 +10,14 @@ Value | Description
 `hov-3` | Travel restricted to high occupancy vehicles of three or more
 `hov-2` | Travel restricted to high occupancy vehicles of two or more
 `no-parking` | No parking in work zone area
-`reduced-width` | Lane width reduced in work zone area
+`reduced-width` | Lane width is reduced in work zone area
 `reduced-height` | Height restrictions reduced in work zone area
 `reduced-length` | Vehicle length restrictions reduced in work zone area
 `reduced-weight` | Vehicle weight restrictions reduced in work zone area
 `axle-load-limit` | Vehicle axle-load-limit restrictions reduced in work zone area
 `gross-weight-limit` | Vehicle gross-weight-limit restrictions reduced in work zone area
 `towing-prohibited` | Towing prohibited in work zone area
-`permitted-oversize-loads-prohibited` | “Permitted oversize loads” prohibited in work zone area; this applies<br>to annual oversize load permits.
+`permitted-oversize-loads-prohibited` | “Permitted oversize loads” prohibited in work zone area; this applies to annual oversize load permits.
 
 ## Used By
 Property | Object
