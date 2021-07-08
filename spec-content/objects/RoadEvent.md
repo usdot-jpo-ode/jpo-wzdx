@@ -24,7 +24,7 @@ Name | Type | Description | Conformance | Notes
 `event_status` | [EventStatus](/spec-content/enumerated-types/EventStatus.md) | The status of the event. | Optional |
 `types_of_work` | Array; \[[TypeOfWork](/spec-content/objects/TypeOfWork.md)\] | A list of the types of work being done in a road event and an indiciation of if each type results in an architectural change to the roadway. | Optional | 
 `workers_present` | Boolean | A flag indicating that there are workers present in the event space. | Optional |
-`reduced_speed_limit` | Integer | The reduced speed limit posted within the event space. | Optional |
+`reduced_speed_limit` | Integer | The reduced speed limit posted within the road event, in miles per hour. This property only needs to be supplied if the speed limit within the road event is lower than the posted speed limit of the roadway. | Optional |
 `restrictions` | Array; \[[RoadRestriction](/spec-content/enumerated-types/RoadRestriction.md)\] | Zero or more road restrictions applying to the work zone road segment associated with the work zone. | Optional | These are included as flags rather than detailed restrictions. Detailed restrictions are coded to specific lanes.
 `description` | String | Short free text description of work zone. | Optional | This will be populated with formal phrases in a later WZDx version
 `creation_date` | String; [date-time](https://tools.ietf.org/html/draft-handrews-json-schema-validation-01#section-7.3.1) | The UTC time and date when the activity or event was created. | Optional | All datetime formats shall follow [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Example: `2016-11-03T19:37:00Z`.

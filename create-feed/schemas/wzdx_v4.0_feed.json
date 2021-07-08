@@ -266,7 +266,7 @@
           "type": "boolean"
         },
         "reduced_speed_limit": {
-          "description": "The reduced speed limit posted within the road event",
+          "description": "If applicable, the reduced speed limit posted within the road event, in miles per hour",
           "type": "integer",
           "minimum": 0
         },
