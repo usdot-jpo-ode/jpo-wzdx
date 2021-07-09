@@ -175,19 +175,7 @@
           "$ref": "#/definitions/BoundingBox"
         }
       },
-      "oneOf": [
-        { 
-          "properties": {
-            "properties": {
-              "required": ["road_event_id"]
-            }
-          }
-        },
-        {
-          "required": ["id"]
-        }
-      ],
-      "required": ["type","properties","geometry"]
+      "required": ["id","type","properties","geometry"]
     },
     "RoadEvent": {
       "title": "Road Event",
@@ -305,29 +293,8 @@
           "items": {
             "$ref": "#/definitions/Lane"
           }
-        },
-        "road_event_id": {
-          "description": "***DEPRECATED*** A unique identifier issued by the data feed provider to identify the work zone project or activity",
-          "type": "string"
-        },
-        "road_number": {
-          "description": "***DEPRECATED*** The road number designated by a jurisdiction such as a county, state or interstate (e.g. I-5, VT 133)",
-          "type": "string"
-        },
-        "road_name": {
-          "description": "***DEPRECATED*** Publicly known name of the road on which the event occurs",
-          "type": "string"
-        },
-        "total_num_lanes": {
-          "description": "***DEPRECATED*** The total number of lanes associated with the road event",
-          "type": "integer",
-          "exclusiveMinimum": 0
         }
       },
-      "anyOf": [
-        { "required": ["road_name"] },
-        { "required": ["road_names"] }
-      ],
       "required": [
         "data_source_id",
         "direction",
@@ -337,7 +304,8 @@
         "end_date",
         "start_date_accuracy",
         "end_date_accuracy",
-        "vehicle_impact"
+        "vehicle_impact",
+        "road_names"
       ]
     },
     "Relationship": {
@@ -514,7 +482,7 @@
     "LaneStatus": {
       "title": "Lane Status Enumerated Type",
       "description": "The status of the lane for the traveling public",
-      "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-one-way", "alternating-flow"]
+      "enum": ["open", "closed", "shift-left", "shift-right", "merge-left", "merge-right", "alternating-flow"]
     },
     "LaneType": {
       "title": "Lane Type Enumerated Type",
@@ -525,31 +493,14 @@
         "left-turning-lane",
         "right-exit-lane",
         "left-exit-lane",
-        "right-entrance-lane",
-        "left-entrance-lane",
+        "right-exit-ramp",
+        "left-exit-ramp",
+        "right-entrance-ramp",
+        "left-entrance-ramp",
         "sidewalk",
         "bike-lane",
-        "alternating-flow-lane",
         "shoulder",
-        "hov-lane",
-        "reversible-lane",
-        "center-left-turn-lane",
-        "left-lane",
-        "right-lane",
-        "middle-lane",
-        "center-lane",
-        "right-shoulder",
-        "left-shoulder",
-        "right-merging-lane",
-        "left-merging-lane",
-        "right-exit-ramp",
-        "right-second-exit-ramp",
-        "left-exit-ramp",
-        "left-second-exit-ramp",
-        "right-entrance-ramp",
-        "right-second-entrance-ramp",
-        "left-entrance-ramp",
-        "left-second-entrance-ramp"
+        "center-left-turn-lane"
       ]
     },
     "LaneRestrictionUnit": {

@@ -11,7 +11,6 @@ Value | Description
 `merge-left` | The lane gradually tapers while merging into the lane directly to the left 
 `merge-right` | The lane gradually tapers while merging into the lane directly to the right
 `alternating-flow` | Traffic may travel in either direction, depending on certain conditions. Example conditions include time of day (e.g. reversible lanes), automated controls, or on-site personnel
-`alternating-one-way` (DEPRECATED) | *This value is deprecated and will be removed in a future version; use `alternating-flow` instead* — The lane alternates the direction of travel via either automated controls or onsite personnel
 
 ## Used By
 Property | Object
